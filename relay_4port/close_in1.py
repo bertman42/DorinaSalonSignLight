@@ -6,7 +6,7 @@ GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
 
 # init list with pin numbers
-GPIO.setup(11, GPIO.OUT) 
+GPIO.setup(17, GPIO.OUT) 
 
 
 #pinList = [2]
@@ -25,7 +25,7 @@ SleepTimeL = 0.5
 # main loop
 
 try:
-  GPIO.output(11, GPIO.HIGH)
+  GPIO.output(17, GPIO.HIGH)
   print "OFF"
 
 

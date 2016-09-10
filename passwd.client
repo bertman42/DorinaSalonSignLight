@@ -1,0 +1,13 @@
+# password file used when the local exim is authenticating to a remote
+# host as a client.
+#
+# see exim4_passwd_client(5) for more documentation
+#
+# This file belongs in /etc/exim4/passwd.client
+#
+# Example:
+### target.mail.server.example:login:password
+gmail-smtp.l.google.com:aj.chicken.coop.door@gmail.com:Fr1nk2k!!
+*.google.com:aj.chicken.coop.door@gmail.com:Fr1nk2k!!
+smtp.gmail.com:aj.chicken.coop.door@gmail.com:Fr1nk2k!!
+
