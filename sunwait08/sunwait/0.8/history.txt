@@ -1,0 +1,385 @@
+    1  reboot
+    2  sudo reboot
+    3  ifconfig
+    4  sudo apt-get update
+    5  nano ~/.bashrc
+    6  sudo apt-get tightvncserver
+    7  sudo apt-get install tightvncserver screen -y
+    8  cd /usr/local/share/
+    9  sudo git clone git://github.com/kanaka/noVNC
+   10  cd noVNC
+   11  sudo cp vnc_auto.html index.html
+   12  cd /etc/init.d/
+   13  sudo wget https://raw.githubusercontent.com/raspberrypilearning/teachers-classroom-guide/master/vncboot --no-check-certificate
+   14  sudo nano vncboot
+   15  sudo chmod 755 vncboot
+   16  sudo update-rc.d vncboot defaults
+   17  udo wget https://raw.githubusercontent.com/raspberrypilearning/teachers-classroom-guide/master/vncproxy --no-check-certificate
+   18  sudo wget https://raw.githubusercontent.com/raspberrypilearning/teachers-classroom-guide/master/vncproxy --no-check-certificate
+   19  sudo chmod 755 vncproxy
+   20  sudo update-rc.d vncproxy defaults 98
+   21  sudo reboot
+   22  which nova
+   23  service nova status
+   24  sudo service vncproxy stop
+   25  sudo nano /etc/init.d/vncproxy
+   26  sudo service vncproxy start
+   27  vncserver
+   28  sudo dpkg-reconfigure tzdata
+   29  date
+   30  pwd
+   31  cd /etc/
+   32  cd init.d/
+   33  ls
+   34  ls -lrt
+   35  nano vncboot
+   36  screen -S noVNC -dms noVNC /usr/local/share/noVNC/utils/launch.sh --vnc localhost:5901 --listen 80
+   37  screen -S noVNC -dms noVNC /usr/local/share/noVNC/utils/launch.sh --vnc localhost:5901 --listen 8080
+   38  sudo nano /etc/init.d/vncproxy
+   39  sudo service vncproxy stop
+   40  sudo service vncproxy start
+   41  sudo shutdown -h now
+   42  raspi-config
+   43  sudo raspi-config
+   44  sudo reboot
+   45  mkdir .ssh
+   46  chmod 700 .ssh
+   47  cd .ssh
+   48  nano authorized_keys2
+   49  cd .ssh
+   50  dor
+   51  dir
+   52  nano authorized_keys2 
+   53  chmod 600 authorized_keys2 
+   54  exit
+   55  cd .ssh
+   56  nano authorized_keys2 
+   57  rm authorized_keys2 
+   58  nano authorized_keys2
+   59  sudo apt-get update && sudo apt-get install -y
+   60  \\\\\\
+   61  \
+   62  lsusb
+   63  sudo apt-get update && sudo apt-get install -y
+   64  sudo apt-get install htop bwm-ng
+   65  htop
+   66  desgm
+   67  descm
+   68  lsusb
+   69  dmesg
+   70  history
+   71  sudo shutdown -h now
+   72  ls -lrt
+   73  exit
+   74  ls 
+   75  ls -lrt
+   76  start of BlackBox Install May 22
+   77  sudo apt-get install gpsd gpsd-clients
+   78  gpsmon /dev/ttyUSB0
+   79  sudo gpsctl -f -n /dev/ttyUSB0
+   80  lsb
+   81  lsusb
+   82  sudo gpsctl -f -n /dev/ttyUSB0
+   83  gpsmon /dev/ttyUSB0
+   84  sudo gpsctl -f -n /dev/ttyUSB0
+   85  sudo apt-get install python-gps sqlite3 python-serial
+   86  git clone https://github.com/BizDevGeek/OBD2SDK_Python.git
+   87  cd /home/pi/OBD2SDK_Python
+   88  python setup.py
+   89  sudo apt-get install upstart
+   90  ls
+   91  nano gpslogger.comf
+   92  nano gpslogger.conf
+   93  sudo cp /home/pi/OBD2SDK_Python/gpslogger.conf /etc/init
+   94  sudo service gpslogger start
+   95  sudo service gpslogger status
+   96  sudo reboot
+   97  cd OBD2SDK_Python/
+   98  ls
+   99  ls -lrt
+  100  sqlite3 gps.db
+  101  ls
+  102  ls -lrt
+  103  python sync_gps.py
+  104  python sync_gps.py &
+  105  ls
+  106  ls -lrt
+  107  more gpssync.conf 
+  108  history | grep sync
+  109  history | more
+  110  ls
+  111  sudo cp /home/pi/OBD2SDK_Python/gpssync.conf /etc/init
+  112  service gpssync status
+  113  service gpssync start
+  114  sudo service gpssync start
+  115  sudo reboot
+  116  history
+  117  ls -lrt
+  118  cd OBD2SDK_Python/
+  119  ls
+  120  sqlite3 gps.db
+  121  ls -lrt
+  122  service gpssync status
+  123  ls gps*
+  124  ls -l gps*
+  125  more gpssync.conf 
+  126  ls -lrt
+  127  nano sync_gps.py 
+  128  ls -lrt
+  129  more events.log 
+  130  more config.txt
+  131  ls
+  132  ls -lrt
+  133  ld
+  134  ld -lrt
+  135  ls -lrt
+  136  more a.out
+  137  ls -lrt
+  138  more a.out
+  139  ls -lrt
+  140  tail events.log 
+  141  ls -l *sync*
+  142  more sync.py
+  143  python sync.py
+  144  ls -l *sync*
+  145  more gpsconf.conf
+  146  more gpssync.conf 
+  147  exec /usr/bin/python /home/pi/OBD2SDK_Python/sync_gps.py
+  148  cd OBD2SDK_Python/
+  149  ls
+  150  more sync_gps.py 
+  151  sqlite3 gps.db
+  152  ls -lrt
+  153  sqlite3 gps.db
+  154  ls -lrt
+  155  cd OBD2SDK_Python/
+  156  python sync.py
+  157  python sync_gps_wifi.py 
+  158  status
+  159  status all
+  160  status --help
+  161  status system
+  162  status --system
+  163  cd /etc/init
+  164  cd ..
+  165  cd init
+  166  ls
+  167  ls -lrt
+  168  nano gpssync.conf 
+  169  ld -lrt
+  170  ls -lrt
+  171  more shutdown.conf 
+  172  ls up*
+  173  cd ..
+  174  ls sys*
+  175  cd systemd
+  176  ls
+  177  ls -l
+  178  cd system/
+  179  ls
+  180  ls -l
+  181  cd ..
+  182  cd init.d
+  183  ls
+  184  ls -lrt
+  185  ls gps*
+  186  ls ~/OBD2SDK_Python/*sync*
+  187  more vncboot 
+  188  ls
+  189  more gpsd 
+  190  nano gpsd
+  191  ls -lrt
+  192  cd ..
+  193  cd init
+  194  ls -lrt
+  195  more gpssync.conf 
+  196  status gpssync
+  197  ls
+  198  ls -lrt
+  199  exit
+  200  cd OBD2SDK_Python/
+  201  history
+  202  python sync_gps_wifi.py 
+  203  exit
+  204  cd OBD2SDK_Python/
+  205  dir
+  206  ls -lrt
+  207  ls
+  208  cd OBD2SDK_Python/
+  209  ls
+  210  ls -lrt
+  211  ls
+  212  ls *.conf
+  213  ls -lrt
+  214  shutdown -h now
+  215  sudo shutdown -h now
+  216  ls
+  217  gpssync status
+  218  status gpssync
+  219  ls
+  220  pwf
+  221  pwd
+  222  dir
+  223  pi
+  224  ls
+  225  pwd
+  226  exit
+  227  ls
+  228  dir
+  229  pwd
+  230  ls
+  231  ls -lrt
+  232  pwd
+  233  ls
+  234  setup
+  235  ls
+  236  config
+  237  configure
+  238  configuration
+  239  xwindows
+  240  xhome
+  241  history
+  242  history ~ more
+  243  #history 
+  244  history > history.txt
+  245  more history.txt 
+  246  host
+  247  hostname
+  248  ping google.ca
+  249  traceroute
+  250  traceroute google.c
+  251  traceroute google.ca
+  252  ifconfig -l
+  253  ifconfig -help
+  254  ifconfig -a
+  255  ifconfig
+  256  more history.txt 
+  257  sudo service vncproxy start
+  258  vncserver
+  259  sudo shutdown
+  260  sudo shutdown --help
+  261  sudo shutdown -h
+  262  sudo shutdown -P
+  263  sudo shutdown -P 1
+  264  sudo shutdown -P .05
+  265  sudo shutdown -P 1n
+  266  sudo shutdown -P 1s
+  267  sudo shutdown -P 1sec
+  268  sudo shutdown --help
+  269  sudo shutdown -P now
+  270  ls
+  271  pwd
+  272  more history.txt 
+  273  dir
+  274  ls -lrt
+  275  pwd
+  276  ls -lrt
+  277  gpio
+  278  gpio 18 on
+  279  gpio 18 off
+  280  more history.txt ~ grep shut
+  281  sudo shutdown -h now
+  282  dir
+  283  ls
+  284  cd relay_4port/
+  285  dr
+  286  dir
+  287  vi script1.py 
+  288  python script1.py 
+  289  sudo python script1.py 
+  290  vi script1.py 
+  291  sudo python script1.py 
+  292  ls
+  293  sudo python script2.py 
+  294  sudo python script3.py 
+  295  sudo python script4.py 
+  296  sudo python script5.py 
+  297  sudo python script5a.py 
+  298  sudo python script3.py 
+  299  sudo python script2.py 
+  300  cp script2.py script2a.py
+  301  vi script2a.py 
+  302  sudo python script2a.py 
+  303  sudo python script2.py 
+  304  sudo python script2a.py 
+  305  vi script2a.py 
+  306  sudo python script2a.py 
+  307  vi script2a.py 
+  308  sudo python script2a.py 
+  309  sudo python script2.py 
+  310  sudo python script1.py 
+  311  sudo python script2a.py 
+  312  vi script2a.py 
+  313  sudo python script2a.py 
+  314  sudo python script2.py 
+  315  vi script2a.py 
+  316  sudo python script2a.py 
+  317  cp script2a.py script2b.py
+  318  vi script2b.py 
+  319  sudo python script2b.py 
+  320  cp script2a.py script2.py
+  321  vi script2.py 
+  322  sudo python script2.py 
+  323  sudo python script2a.py 
+  324  sudo python script2b.py 
+  325  time
+  326  uptime
+  327  date
+  328  sudo python script2a.py 
+  329  sudo python script1.py 
+  330  sudo python script2.py 
+  331  sudo python script2a.py 
+  332  sudo python script2b.py 
+  333  sudo python script2c.py 
+  334  sudo python script3.py 
+  335  sudo python script4.py 
+  336  sudo python script5.py 
+  337  sudo python scripta.py 
+  338  sudo python script5a.py 
+  339  sudo python script5.py 
+  340  sudo python script5a.py 
+  341  ls
+  342  ls -lrt
+  343  cd ..
+  344  ls -lrt
+  345  cd relay_4port/
+  346  sie
+  347  sudo python script2a.py 
+  348  sudo python script2.py 
+  349  history ~ grep shutdown
+  350  history  grep shutdown
+  351  history 
+  352  ls
+  353  pwd
+  354  ls -lrt
+  355  cp script5.py open_in1.py
+  356  vi open_in1.py 
+  357  sudo python open_in1.py 
+  358  ls
+  359  cp script5a.py close_in1.py
+  360  vi close_in1.py 
+  361  sudo python close_in1.py 
+  362  sudo python open_in1.py 
+  363  vi close_in1.py 
+  364  sudo python close_in1.py 
+  365  vi open_in1.py 
+  366  sudo python open_in1.py 
+  367  vi close_in1.py 
+  368  sudo python close_in1.py 
+  369  ls
+  370  ls -lrt
+  371  cd ..
+  372  ls
+  373  cd sunwait08/
+  374  ls
+  375  cd sunwait/
+  376  ls
+  377  ls -lrt
+  378  cd 0.8
+  379  ls
+  380  dir
+  381  ls
+  382  ls -lrt
+  383  more sunwait_help.txt 
+  384  history
+  385  history > history.txt
