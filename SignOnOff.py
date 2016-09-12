@@ -10,10 +10,8 @@ import sys
 #Setup GPIO pins
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
-relay1 = [11]
-relay2 = [7]
+relay1 = [17]
 GPIO.setup(11, GPIO.OUT)
-GPIO.setup(7, GPIO.OUT)
 
 #Setup logging
 LOG_FILENAME="/home/pi/DSSL/DSSL.log"
@@ -43,22 +41,18 @@ current_time = current_time.split(" ")[3].strip()
 print "Current time:", current_time
 
 if current_time < 12:
-	print ("It is Morning")
+	print ("It is Morning, turn off the light")
 	try:
 		GPIO.output(relay1,GPIO.LOW)
-		print "Relay 1 ON"
-		GPIO.output(relay2,GPIO.HIGH)
-		print "Relay 2 OFF"
+		print "Relay 1 OFF"
 	except:
 		GPIO.cleanup()
 else:
-	print ("It is Afternoon and time to close")
+	print ("It is evening, time to turn light back on")
 
 	try:
-                GPIO.output(relay1,GPIO.LOW)
-                print "Relay 1 ON"
-                GPIO.output(relay2,GPIO.LOW)
-                print "Relay 2 ON"
+                GPIO.output(relay1,GPIO.HIGH)
+                print "Relay 1 OFF"
         except:
                 GPIO.cleanup()
 
