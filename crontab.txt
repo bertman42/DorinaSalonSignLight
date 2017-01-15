@@ -21,6 +21,5 @@
 # 
 # m h  dom mon dow   command
 0 6 * * * /home/pi/DSSL/check_for_sunrise.sh >/dev/null 2>/dev/null
-0 17 * * * /home/pi/DSSL/check_for_sunset.sh >/dev/null 2>/dev/null
-
+0 16 * * * /home/pi/DSSL/check_for_sunset.sh >/dev/null 2>/dev/null
 
