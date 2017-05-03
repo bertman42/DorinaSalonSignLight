@@ -16,7 +16,7 @@ echo "`date '+%m/%d/%y @ %H:%M:%S'`" " - Sunrise today: " $sunrise_time | cat - 
 echo "`date '+%m/%d/%y @ %H:%M:%S'`" " - Turning relay in1 off " | cat - $log_file > temp && mv temp $log_file
 sudo python /home/pi/DSSL/relay_4port/close_in1.py
 
-echo "`date '+%m/%d/%y @ %H:%M:%S'`" " - Sign turned off for the day - saving money!" | cat - $log_file > temp && mv temp $log_file
+echo "`date '+%m/%d/%y @ %H:%M:%S'`" " - Sign turned off for the day!" | cat - $log_file > temp && mv temp $log_file
 
 mail -s "Dorina Salon Sign activity" bertman30@msn.com < $log_file
 
